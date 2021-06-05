@@ -1,0 +1,34 @@
+.n-logo {
+    width: 103.72px;
+    height: 4rem;
+    color: #124191;
+    display: flex;
+    align-items: center;
+    padding-left: 4.6vw;
+}
+
+.nav-toggle {
+    padding: 1px 5.6vw 0 18px;
+}
+
+.navbar-ul {
+    display: inline-flex;
+    padding: 0 20px;
+}
+
+.navbar-li {
+    color: rgba(255, 255, 255, 0.89);
+    font-size: 1.05rem;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+.navbar-li:hover {
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+    transform: scale(1.1);
+    text-decoration: none !important;
+}
