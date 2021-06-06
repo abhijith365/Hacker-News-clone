@@ -1,18 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import { getStoryIds } from '../services/hnapi';
 import { Story } from '../Story';
+import ReactPaginate from "react-paginate";
 
 
 export const StoriesContainer = () => {
     //assinging a empty array to stroryIds
     const [storyIds, setStoryIds] = useState([]);
 
+    const [pageNumber, setPageNumber] = useState(0);
 
-    //taking promise and separate data from it
+    //pagination
+
+    const usersPerPage = 9;
+    const pagesVisited = pageNumber * usersPerPage;
+
+    const displayUsers = storyIds
+        .slice(pagesVisited, pagesVisited + usersPerPage)
+        .map((storyId) => {
+            return (
+                <Story key={storyId} storyId={storyId} />
+            );
+        });
+
+    const pageCount = Math.ceil(storyIds.length / usersPerPage);
+
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    };
+
+
     useEffect(() => {
-        //taking 30 ids from api
-        getStoryIds().then(data => setStoryIds(data.slice(0, 20)));
+
+        getStoryIds().then(data => setStoryIds(data));
     }, []);
-    // storyids itaration 
-    return storyIds.map(storyId => <Story key={storyId} storyId={storyId} />)
+
+    return <div className="App">
+        {displayUsers}
+        <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationBttns"}
+            previousLinkClassName={"previousBttn"}
+            nextLinkClassName={"nextBttn"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+        />
+    </div>
 };
