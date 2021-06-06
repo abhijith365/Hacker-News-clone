@@ -1,13 +1,14 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import { StoriesContainer } from './containers/StoriesContainer';
+import Routes from './navigation/Routes';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <StoriesContainer />
+
+
+      <Routes />
+
     </div>
   );
 }

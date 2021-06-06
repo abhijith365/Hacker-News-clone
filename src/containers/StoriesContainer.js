@@ -12,7 +12,7 @@ export const StoriesContainer = () => {
 
     //pagination
 
-    const usersPerPage = 9;
+    const usersPerPage = 10;
     const pagesVisited = pageNumber * usersPerPage;
 
     const displayUsers = storyIds

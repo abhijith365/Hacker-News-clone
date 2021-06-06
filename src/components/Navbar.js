@@ -99,13 +99,10 @@ const Navbar = () => {
                         </Typography>
                         <Grid item >
                             <ul className="navbar-ul">
-                                <Link to='new/'><li className="navbar-li">New</li></Link>
-                                <Link to='Past/'><li className="navbar-li" >Past</li></Link>
-                                <Link to='Comments/'><li className="navbar-li">Comments</li></Link>
-                                <Link to='ask/'><li className="navbar-li">ask</li></Link>
-                                <Link to='show/'><li className="navbar-li">show</li></Link>
-                                <Link to='Jobs/'><li className="navbar-li">Jobs</li></Link>
-                                <Link to='Submit/'>   <li className="navbar-li">Submit</li></Link>
+                                <button className="nav-btn"><li className="navbar-li">New-Posts</li></button>
+                                <button className="nav-btn"><li className="navbar-li">Past-Posts</li></button>
+                                <button className="nav-btn"><li className="navbar-li">Jobs</li></button>
+                                <button className="nav-btn"><li className="navbar-li">Submit </li></button>
 
                             </ul>
                         </Grid>

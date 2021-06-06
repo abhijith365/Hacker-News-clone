@@ -16,6 +16,12 @@
     padding: 0 20px;
 }
 
+.nav-btn {
+    color: transparent;
+    background-color: transparent;
+    border: none;
+}
+
 .navbar-li {
     color: rgba(255, 255, 255, 0.89);
     font-size: 1.05rem;
