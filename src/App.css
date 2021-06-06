@@ -8,7 +8,72 @@ body {
     background-color: black;
 }
 
-.card-container:hover {
+.container:hover {
     transition: all .1s ease;
     transform: scale(1.01);
+}
+
+/* CARD Styling */
+.card-container {
+    display: inline-flex;
+    margin-left: 5rem;
+
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #b3e3ff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-grow: 1;
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+}
+
+.inner-card {
+    width: 80%;
+    margin-top: 4rem;
+}
+
+.inner-card h2 {
+    margin-bottom: 20px;
+}
+
+
+.by {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 20px 20px;
+    font-style: italic;
+
+}
+
+.posted {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 20px 20px 0;
+    font-size: small;
+}
+
+.btn {
+    margin-top: 3rem;
+}
+
+.btn a {
+    padding: 10px 8px;
+    border-radius: 4px;
+    border-color: none;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    background-color: rgba(255, 255, 255, 0.603);
+    color: #34495e;
 }
