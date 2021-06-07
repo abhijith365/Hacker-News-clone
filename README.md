@@ -1,3 +1,5 @@
+![FireShot Capture 015 - Hacker News Clone - localhost](https://user-images.githubusercontent.com/63362359/120963201-c469b200-c77e-11eb-8486-2f2a0ff305f1.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
